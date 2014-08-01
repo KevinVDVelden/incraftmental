@@ -7,13 +7,27 @@ onload : function(){
   }
   buttons.init();
   window.setInterval(function(){main.tick()}, 1000);
+  this.registerTickFunc( inventory.doTools.bind( inventory ), 1000 );
+  this.registerTickFunc( inventory.updateDisplay.bind( inventory ), 1000 );
+  this.registerTickFunc( villagers.doVillagers.bind( villagers ), 1000 );
 },
 
-tick : function(){
-  inventory.doTools();
-  villagers.doVillagers();
-  inventory.updateDisplay();
+tick : function() {
+    interval = 1000;
+
+    for ( var i = 0; i < this.tickFuncs.length; i++ ) {
+        this.tickFuncs[i][2] += interval;
+
+        while ( this.tickFuncs[i][2] > this.tickFuncs[i][1] ) {
+            this.tickFuncs[i][0]();
+            this.tickFuncs[i][2] -= this.tickFuncs[i][1];
+        }
+    }
 },
+registerTickFunc: function( func, interval ) {
+    this.tickFuncs.push( [ func, interval, 0 ] );
+},
+tickFuncs: [],
 
 addAlert : function(text){
   $('#alerts').show();

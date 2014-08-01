@@ -9,7 +9,7 @@ var inventory = {
       grass:          {display:'Grass'              , symbol: '-',                         },
       dirt:           {display:'Dirt'               , symbol: '%',                         },
       cobble:         {display:'Cobblestone'        , symbol: 'C',                         },
-      planks:         {display:'Planks'             , symbol: 'P', recipe:'='              },
+      planks:         {display:'Plank'              , symbol: 'P', recipe:'='              },
       sand:           {display:'Sand'               , symbol: 'S',                         },
       gravel:         {display:'Gravel'             , symbol: '$',                         },
       gold_ore:       {display:'Gold Ore'           , symbol: 'G',                         },
@@ -118,20 +118,27 @@ var inventory = {
   init : function(){
     for(var group in this.objects){
       for(var object in this.objects[group]){
-        this.objects[group][object].quantity = 0;
-        this.objects[group][object].hasOwned = false;
+        item = this.objects[group][object]
+        item.quantity = 0;
+        item.hasOwned = false;
+        item.slug = object;
       }
     }
   },
 
   addObject : function(slug,quantity){
     if(typeof(quantity)==='undefined') quantity = 1;
+
     for(var group in this.objects){
       if(slug in this.objects[group]){
         this.objects[group][slug].quantity += quantity;
         this.objects[group][slug].hasOwned = true;
+
+        return true;
       }
     }
+
+    return false;
   },
 
   getObject : function(slug){

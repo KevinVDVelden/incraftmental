@@ -6,7 +6,7 @@ onload : function(){
     inventory.objects = JSON.parse(localStorage['objects']);
   }
   buttons.init();
-  window.setInterval(function(){main.tick()}, 1000);
+  this.interval = window.setInterval(function(){main.tick()}, 1000);
   this.registerTickFunc( inventory.doTools.bind( inventory ), 1000 );
   this.registerTickFunc( inventory.updateDisplay.bind( inventory ), 1000 );
   this.registerTickFunc( villagers.doVillagers.bind( villagers ), 1000 );

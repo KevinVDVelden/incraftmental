@@ -1,13 +1,13 @@
 .chromeframe {
   margin: 0.2em 0;
-  background: #ddd;
-  color: #222;
+  background: #dddddd;
+  color: #222222;
   padding: 0.2em 0; }
 
 body {
-  background: #222;
+  background: #222222;
   font-family: monospace;
-  color: #ddd;
+  color: #dddddd;
   font-size: 14px;
   line-height: 1.4; }
 
@@ -15,29 +15,29 @@ a {
   color: #0b0; }
 
 button {
-  background: #555;
-  border: 1px solid #ddd;
+  background: #555555;
+  border: 1px solid #dddddd;
   border-radius: 0;
-  color: #ddd;
+  color: #dddddd;
   cursor: pointer;
   margin: 5px 0 0 5px;
   border-radius: 4px; }
 
 button:hover {
-  color: #ddd;
+  color: #dddddd;
   background: #666666; }
 
 button:disabled {
-  color: #ddd;
+  color: #dddddd;
   cursor: default; }
 
 button:disabled:hover {
-  color: #ddd;
-  background: #333; }
+  color: #dddddd;
+  background: #333333; }
 
 .pane {
   display: none;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   width: 300px;
   padding: 20px;
   position: absolute;
@@ -60,26 +60,29 @@ button:disabled:hover {
   #inventory .inventory-item {
     width: 150px; }
     #inventory .inventory-item.selected {
-      background: #555;
+      background: #555555;
       border-radius: 4px; }
 
 #villagers {
   right: 390px; }
   #villagers .villager {
     width: 300px;
-    border-bottom: 1px dashed #333; }
+    border-bottom: 1px dashed #333333; }
 
-#get-villager, #make-planks, #make-crafting, #alerts {
+#get-villager,
+#make-planks,
+#make-crafting,
+#alerts {
   display: none; }
 
 #options-menu {
   display: none;
   position: absolute;
   z-index: 9001;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   left: 15px;
   top: 15px;
-  background: #222;
+  background: #222222;
   padding: 10px; }
 
 #tabs {
@@ -90,9 +93,9 @@ button:disabled:hover {
 
 .work-tab {
   float: left;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 5px 15px;
@@ -100,12 +103,12 @@ button:disabled:hover {
   cursor: pointer;
   display: none; }
   .work-tab.active {
-    border-bottom: 1px solid #222; }
+    border-bottom: 1px solid #222222; }
 
 #work-area {
   float: left;
   clear: both;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   width: 450px;
   margin-top: 40px;
@@ -115,8 +118,8 @@ button:disabled:hover {
 #crafting {
   display: none; }
   #crafting #crafting-square {
-    border-top: 1px solid #ddd;
-    border-left: 1px solid #ddd;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
     width: 300px;
     height: 300px;
     margin: 30px 15px;
@@ -125,9 +128,9 @@ button:disabled:hover {
     width: 100px;
     height: 100px;
     float: left;
-    border-bottom: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    background: #333;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    background: #333333;
     text-align: center;
     padding-top: 40px;
     font-size: 20px;
@@ -156,15 +159,15 @@ button:disabled:hover {
     box-sizing: border-box; }
     #smelting .smelt-square.input {
       padding-top: 40px;
-      border: 1px solid #ddd;
-      background: #333;
+      border: 1px solid #dddddd;
+      background: #333333;
       cursor: pointer; }
   #smelting .line {
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     position: relative;
     overflow: hidden; }
   #smelting .bar {
-    background: #ddd;
+    background: #dddddd;
     position: absolute; }
   #smelting #smelt-progress {
     margin-top: 45px;
@@ -191,21 +194,21 @@ button:disabled:hover {
     margin: 30px 15px; }
 
 #alerts {
-  background: #222;
+  background: #222222;
   position: absolute;
   bottom: 15px;
   left: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 5px;
   width: 300px; }
   #alerts .alert {
-    border-bottom: 1px dashed #333; }
+    border-bottom: 1px dashed #333333; }
 
 .mouse-alert {
   position: absolute;
   z-index: 99;
-  background: #222;
-  border: 1px solid #ddd;
+  background: #222222;
+  border: 1px solid #dddddd;
   padding: 2px 5px; }
 
 #footer {
@@ -218,7 +221,7 @@ button:disabled:hover {
   /* Safari */ }
 
 #footer:hover {
-  opacity: 1;
+  opacity: 1.0;
   transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   /* Safari */ }
@@ -237,7 +240,7 @@ button:disabled:hover {
     float: right; }
 
 .window .inner {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   background: #222;
   margin: 10px;
   margin-top: 0;
@@ -249,4 +252,3 @@ button:disabled:hover {
   float: left;
   display: block;
   width: 100%; }
-

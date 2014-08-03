@@ -64,7 +64,7 @@ var world = {
 
     init: function() {
         this.build();
-        this.canvas = $('#world-canvas')[0];
+        this.canvas = $('#world-div')[0];
         this.context = this.canvas.getContext('2d');
 
         this.blitCanvas = $('<canvas width="512" height="512" style="position: absolute; left: -5000px;"></canvas>');

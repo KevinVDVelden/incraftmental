@@ -227,28 +227,39 @@ button:disabled:hover {
   /* Safari */ }
 
 #exploration {
-  z-index: 1000;
-  position: absolute;
-  top: 50px;
-  width: 99%;
-  margin: 0; }
+  display: none; }
   #exploration canvas {
-    background: #000;
+    border: 1px solid #dddddd;
+    background: #555555;
     margin: 10px;
     margin-bottom: 0px; }
   #exploration .controls {
-    float: right; }
-
-.window .inner {
-  border: 1px solid #dddddd;
-  background: #222;
-  margin: 10px;
-  margin-top: 0;
-  padding: 15px;
-  padding-bottom: 5px; }
-.window h3 {
-  margin: 0;
-  clear: both;
-  float: left;
-  display: block;
-  width: 100%; }
+    float: right;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    position: relative; }
+    #exploration .controls button {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      line-height: 20px;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0; }
+      #exploration .controls button.up {
+        left: 35px;
+        top: 0; }
+      #exploration .controls button.right {
+        left: 70px;
+        top: 35px; }
+      #exploration .controls button.left {
+        left: 0;
+        top: 35px; }
+      #exploration .controls button.down {
+        top: 70px;
+        left: 35px; }
+  #exploration .inner {
+    margin-top: 0;
+    padding: 15px; }
